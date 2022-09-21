@@ -1,4 +1,4 @@
-package Day7;
+package Day7.RunTimePolymorphism;
 
 import Day7.RunTimePolymorphism.Animal;
 
