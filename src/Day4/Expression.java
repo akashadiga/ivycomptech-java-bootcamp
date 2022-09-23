@@ -6,39 +6,27 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Expression {
-    private final List<Character> leftBrackets
+    private List<Character> leftBrackets
             = Arrays.asList('(', '<', '[', '{');
-    private final List<Character> rightBrackets
+    private List<Character> rightBrackets
             = Arrays.asList(')', '>', ']', '}');
 
     public boolean isBalanced(String input) {
         Stack<Character> stack = new Stack<>();
 
         for (char ch : input.toCharArray()) {
-            if (isLeftBracket(ch))
+            if (leftBrackets.contains(ch))
                 stack.push(ch);
 
-            if (isRightBracket(ch)) {
+            if (rightBrackets.contains(ch)) {
                 if (stack.empty()) return false;
 
                 var top = stack.pop();
-                if (!bracketsMatch(top, ch)) return false;
+                if (!(leftBrackets.indexOf(top) == rightBrackets.indexOf(ch))) return false;
             }
         }
 
         return stack.empty();
-    }
-
-    private boolean isLeftBracket(char ch) {
-        return leftBrackets.contains(ch);
-    }
-
-    private boolean isRightBracket(char ch) {
-        return rightBrackets.contains(ch);
-    }
-
-    private boolean bracketsMatch(char left, char right) {
-        return leftBrackets.indexOf(left) == rightBrackets.indexOf(right);
     }
     public static void main(String[] args) {
         Expression exp= new Expression();

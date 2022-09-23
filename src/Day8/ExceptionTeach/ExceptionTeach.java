@@ -1,4 +1,6 @@
-package Day8;
+package Day8.ExceptionTeach;
+
+import Day8.ExceptionTeach.UserDefinedException;
 
 public class ExceptionTeach {
     //Exception is an unwanted or unexpected event that happen at runtime
@@ -65,4 +67,3 @@ public class ExceptionTeach {
         }
     }
 }
-

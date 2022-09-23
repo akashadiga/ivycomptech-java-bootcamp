@@ -10,9 +10,6 @@ public class Main {
         System.out.println(tenRupees.equals(anotherTenRupees));
         System.out.println(tenRupees.hashCode());
         System.out.println(anotherTenRupees.hashCode());
-        Money fiveeuros = new Money(5);
-        Money twoeuros = new Money(2);
-        Money seveneuros = new Money(7);
-        System.out.println((fiveeuros.sum(twoeuros)).equals(seveneuros));
+
     }
 }

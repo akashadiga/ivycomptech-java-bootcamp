@@ -17,11 +17,5 @@ public class Money{
         return value == money.value;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(value);
-    }
-    public Money sum(Money euro){
-        return new Money( this.value+euro.value);
-    }
+
 }
